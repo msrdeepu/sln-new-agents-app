@@ -35,13 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/scrm-contacts', [ContactController::class, 'index'])->name('contacts.index');
-    Route::get('/scrm-contacts/create', [ContactController::class, 'create'])->name('contacts.create');
-    Route::post('/scrm-contacts/store', [ContactController::class, 'store'])->name('contacts.store');
-    Route::get('/scrm-contacts/{id}/edit',[ContactController::class, 'edit'])->name('contacts.edit');
-    Route::patch('/scrm-contacts/{id}', [ContactController::class, 'update'])->name('contacts.update');
-    Route::post('/scrm-contacts/{id}/{asset}', [ContactController::class, 'deleteasset'])->name('contacts.deleteasset');
-    Route::delete('/scrm-contacts/{id}', [ContactController::class, 'destroy']) -> name('contacts.destroy');
+
 });
 
 require __DIR__.'/auth.php';
