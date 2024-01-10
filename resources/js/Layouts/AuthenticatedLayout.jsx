@@ -7,6 +7,7 @@ import {
     UserOutlined,
     LogoutOutlined,
     DownOutlined,
+    UsergroupAddOutlined,
 } from "@ant-design/icons";
 import {
     Col,
@@ -77,6 +78,15 @@ export default function Authenticated({ header, children }) {
                             label: (
                                 <Link href={window.route("dashboard")}>
                                     Dashboard
+                                </Link>
+                            ),
+                        },
+                        {
+                            key: "contacts",
+                            icon: <UsergroupAddOutlined />,
+                            label: (
+                                <Link href={window.route("contacts.index")}>
+                                    Contacts
                                 </Link>
                             ),
                         },
