@@ -63,9 +63,19 @@ export default function Authenticated({ header, children }) {
         <Layout className="app-layout">
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo">
-                    <Typography.Title className="logo-text" level={3}>
-                        {collapsed ? "MSR" : "Web App"}
-                    </Typography.Title>
+                    {/* <Typography.Title className="logo-text" level={3}>
+                        {collapsed ? "SLN" : "Agents App"}
+                    </Typography.Title> */}
+                    <img
+                        style={{
+                            width: "auto",
+                            height: `${collapsed ? "30px" : "40px"}`,
+                            backgroundColor: "white",
+                            padding: "2px",
+                            borderRadius: "6px",
+                        }}
+                        src="https://slndevelopers.co.in/assets/img/logo-center.png"
+                    />
                 </div>
                 <Menu
                     theme="dark"
@@ -77,16 +87,7 @@ export default function Authenticated({ header, children }) {
                             icon: <UserOutlined />,
                             label: (
                                 <Link href={window.route("dashboard")}>
-                                    Dashboard
-                                </Link>
-                            ),
-                        },
-                        {
-                            key: "contacts",
-                            icon: <UsergroupAddOutlined />,
-                            label: (
-                                <Link href={window.route("contacts.index")}>
-                                    Contacts
+                                    Home
                                 </Link>
                             ),
                         },
@@ -141,7 +142,7 @@ export default function Authenticated({ header, children }) {
                 <Content
                     style={{
                         margin: "24px 16px",
-                        padding: 24,
+                        padding: 0,
                         minHeight: 280,
                     }}
                 >
